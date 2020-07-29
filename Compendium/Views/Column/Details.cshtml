@@ -1,0 +1,32 @@
+﻿@model Compendium.Models.ColumnViewModel
+@{
+    ViewData["Title"] = "Details - Table: " + Model.TableName;
+}
+<h1>@ViewData["Title"] | <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> | <a asp-action="Index" asp-route-tablename="@Model.TableName">Back to List</a></h1>
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Name)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Name)</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Number)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Number)</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Type)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Type)</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Length)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Length)</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Default)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Default)</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.IsNull)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.IsNull)</dd>
+        
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.IsIdentity)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.IsIdentity)</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Description)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Description)</dd>
+    </dl>
+</div>

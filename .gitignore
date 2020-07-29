@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/XUnitTests/obj
+/XUnitTests/bin
+/Compendium/obj
+/Compendium/bin
+/Compendium/wwwroot

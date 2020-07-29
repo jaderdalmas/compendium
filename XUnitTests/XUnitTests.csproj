@@ -1,0 +1,68 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+
+    <Authors>Jader Dalmas</Authors>
+
+    <Description>XUnit Test of the compendium project</Description>
+
+    <Copyright>Jader Dalmas</Copyright>
+
+    <RepositoryUrl>https://github.com/jaderdalmas/compendium</RepositoryUrl>
+
+    <RepositoryType>Private BitBucket</RepositoryType>
+
+    <PackageTags>Compendium; XUnit; Test</PackageTags>
+
+    <NeutralLanguage>en</NeutralLanguage>
+
+    <AssemblyName>XUnitTests</AssemblyName>
+
+    <RootNamespace>XUnitTests</RootNamespace>
+
+    <PackageId>XUnitTest</PackageId>
+
+    <Product>XUnitTest</Product>
+
+    <Company>Jader Dalmas</Company>
+
+    <PackageReleaseNotes>1.0.0 -&gt; Jan/20 - Services tests and Moq; Controller integration tests
+0.2.0 -&gt; Jan/20 - Repositories tests like EntityModel, Postgre, DB2 and Moq
+0.1.0 -&gt; Jan/20 - Obj Tests like ViewModel, Extension and Settings; ClassFixture</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="3.1.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
+    <PackageReference Include="Moq" Version="4.13.1" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" Version="1.2.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Compendium\Compendium.csproj" />
+  </ItemGroup>
+
+</Project>
